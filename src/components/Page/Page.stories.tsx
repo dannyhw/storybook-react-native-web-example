@@ -1,22 +1,16 @@
-import React from 'react';
-import {ComponentStory, ComponentMeta} from '@storybook/react';
-
-import {Page} from './Page';
+import {ComponentMeta} from '@storybook/react';
 import * as HeaderStories from '../Header/Header.stories';
+import {Page} from './Page';
 
 export default {
   title: 'Example/Page',
   component: Page,
 } as ComponentMeta<typeof Page>;
 
-const Template: ComponentStory<typeof Page> = args => <Page {...args} />;
-
 export const LoggedIn = {
-  ...Template,
   args: HeaderStories.LoggedIn.args,
 };
 
 export const LoggedOut = {
-  ...Template,
   args: HeaderStories.LoggedOut.args,
 };
