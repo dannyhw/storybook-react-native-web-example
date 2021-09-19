@@ -1,17 +1,25 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import {ComponentStory, ComponentMeta} from '@storybook/react';
 
-import { Button } from './Button';
+import {Button} from './Button';
+import {View} from 'react-native';
 
 export default {
   title: 'Example/Button',
   component: Button,
   argTypes: {
-    backgroundColor: { control: 'color' },
+    backgroundColor: {control: 'color'},
   },
+  decorators: [
+    Story => (
+      <View style={{flex: 1, alignItems: 'flex-start'}}>
+        <Story />
+      </View>
+    ),
+  ],
 } as ComponentMeta<typeof Button>;
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+const Template: ComponentStory<typeof Button> = args => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
