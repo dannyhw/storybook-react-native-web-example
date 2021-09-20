@@ -4,7 +4,7 @@ import {StyleSheet, Text, View} from 'react-native';
 import {Draggable} from './Draggable';
 
 export default {
-  title: 'components/Draggable',
+  title: 'libraries/react-native-gesture-handler/Draggable',
   component: Draggable,
   decorators: [
     Story => (
