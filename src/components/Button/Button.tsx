@@ -24,7 +24,7 @@ interface ButtonProps {
    * Optional click handler
    */
   onPress?: () => void;
-  style: StyleProp<ViewStyle>;
+  style?: StyleProp<ViewStyle>;
 }
 
 const textSizeStyles = {
