@@ -10,10 +10,17 @@ export const parameters = {
 
 // Generate required css for vector-icons
 import iconFont from 'react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf';
-const iconFontStyles = `@font-face {
+import materialiconFont from 'react-native-vector-icons/Fonts/MaterialIcons.ttf';
+const iconFontStyles = `
+@font-face {
   src: url(${iconFont});
   font-family: MaterialCommunityIcons;
-}`;
+}
+@font-face {
+  src: url(${materialiconFont});
+  font-family: MaterialIcons;
+}
+`;
 
 // Create stylesheet
 const style = document.createElement('style');

@@ -38,6 +38,10 @@ module.exports = {
           __dirname,
           '../node_modules/react-native-vector-icons/MaterialCommunityIcons.js',
         ),
+        path.resolve(
+          __dirname,
+          '../node_modules/react-native-vector-icons/MaterialIcons.js',
+        ),
       ],
     });
     config.resolve.extensions = ['.web.js', ...config.resolve.extensions];
