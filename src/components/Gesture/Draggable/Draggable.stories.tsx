@@ -22,6 +22,6 @@ export default {
 
 export const Basic = {
   args: {
-    children: <Text>Hello World</Text>,
+    children: <Text>Drag me around</Text>,
   },
 };
