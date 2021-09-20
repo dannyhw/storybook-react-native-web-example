@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 module.exports = {
   stories: ['../src/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
   addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
@@ -8,6 +9,14 @@ module.exports = {
       'react-native-svg': 'react-native-svg-web',
     };
 
+    config.plugins.push(
+      new webpack.DefinePlugin({
+        'process.env.NODE_ENV': JSON.stringify(
+          process.env.NODE_ENV || 'development',
+        ),
+        __DEV__: process.env.NODE_ENV !== 'production' || true,
+      }),
+    );
     // fix for uncompiled react-native dependencies
     config.module.rules.push({
       test: /\.(js|jsx|ts|tsx)$/,
