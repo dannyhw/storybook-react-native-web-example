@@ -6,6 +6,9 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  docs: {
+    source: {excludeDecorators: true},
+  },
 };
 
 // Generate required css for vector-icons

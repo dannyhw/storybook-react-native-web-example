@@ -53,6 +53,7 @@ module.exports = {
         ),
       ],
     });
+
     config.resolve.extensions = ['.web.js', ...config.resolve.extensions];
 
     return config;
