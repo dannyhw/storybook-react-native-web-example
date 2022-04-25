@@ -1,7 +1,8 @@
 # OSX
+*.hprof
+/vendor/bundle/
 #
 .DS_Store
-
 # Xcode
 #
 build/
